@@ -5,22 +5,23 @@
         return a + b
     }
 
-    add(5, 10)
+     console.log(add(5, 10));
+     console.log(add(20, 30));
     // add("5", 10)
 
     // Special Type `void` - return nothing
     // Function doesn't return a meaningful value, but it does finish
-    function log(message: string): void {
-        console.log(message)
+       function log(message: string): void {
+        console.log("LOG:", message);
     }
 
     log("Hello, World!")
 
     // Another Special Type `never`
     // Function never finishes normally (throws error, infinite loop)
-    function logAndThrow(errorMessage: string) {
-        console.log(errorMessage)
-        throw new Error(errorMessage)
+    function logAndThrow(errorMessage: string): never {
+        console.log(errorMessage);
+        throw new Error(errorMessage);
     }
 
     // Function as Types
@@ -34,29 +35,25 @@
     }
 
     let logMsg = (msg: string): void => {
-        console.log(msg)
-    }
+        console.log("Callback:", msg);
+    };
 
-    performJob(logMsg)
+    performJob(logMsg);
 
-    // Useful for objects and methods
     type User = {
         name: string;
         age: number;
         greet: () => string;
-    }
+    };
 
     let user: User = {
-        name: "Elmer",
-        age: 39,
-        // greet: function() {
-        //     return this.name
-        // }
+        name: "Dong",
+        age: 25,
         greet() {
-            console.log(`Hello, ${this.name}`)
-            return this.name
+            console.log(`Hello, ${this.name}`);
+            return this.name;
         }
-    }
+    };
 
-    user.greet()
-})
+    user.greet();
+})();
