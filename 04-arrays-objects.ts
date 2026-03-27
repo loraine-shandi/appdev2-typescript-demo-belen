@@ -1,13 +1,14 @@
-let hobbies = ["Eating", "Watching"]
+let hobbies = ["Gaming", "Watching"];
 
-// hobbies.push(10)
 
-// let userList: (string | number)[];
+hobbies.push("Reading");
+
+
 let userList: Array<string | number>;
 
-userList = ["Elmer", "Elmer123", 123456]
+userList = ["Shandi", "Shan123", 12];
+console.log(userList);
 
-// console.log(userList)
 
 let user: {
     name: string;
@@ -18,23 +19,27 @@ let user: {
         id: number
     }
 } = {
-    name: "Elmer",
-    age: 31,
-    hobbies: ["Eating", "Sleeping"],
+    name: "Shandi",
+    age: 20,
+    hobbies: ["Gaming", "Watching"],
     role: {
-        description: 'admin',
-        id: 1
+        description: 'student',
+        id: 2
     }
-}
+};
 
-// Must not null or undefined
-let val: {} = "Elmer Alvarado"
+console.log(user);
 
-// Flexible Object - Record Type
-let data: Record<string, number | string>
+
+let val: {} = "Shandi Belen";
+console.log(val);
+
+
+let data: Record<string, number | string>;
 
 data = {
-    1: 1,
-    name: 'Elmer'
-    // isPartTimeInstructor: true
-}
+    id: 1,
+    name: 'Shandi'
+};
+
+console.log(data);
