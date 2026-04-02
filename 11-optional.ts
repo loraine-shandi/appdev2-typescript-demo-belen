@@ -1,32 +1,25 @@
-// Optional Values in parameter
 function generateError(msg?: string) {
-    throw new Error(msg)
+    throw new Error(msg || "Default error message");
 }
 
-generateError("An error occured") // Automatic Semicolon Insertion pitfall - add ; to explicitly tell that this is a function
-// generateError()
-
+generateError("An error occurred");
 
 (() => {
-    // Optional Values in object properties
     type User = {
         name: string;
         age: number;
-        role?: 'admin' | 'guess'
-    }
+        role?: 'admin' | 'guest';
+    };
 
     let user: User = {
-        name: 'Elmer',
-        age: 31
-    }
+        name: 'Dong',
+        age: 20
+    };
 
-    user.name
-    user.age
-})
+    console.log(user.name);
+    console.log(user.age);
+})();
 
-// Nullish Coalescing `??` operator 
-let input = ''
-const didProvideInput = input ?? false;
 
 // try it on browser console log to see results
 // update it `??` to `||`
